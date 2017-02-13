@@ -8,7 +8,7 @@
 	<arg name="result_draw_markers_cube" default="false" />
 	<arg name="result_draw_markers_axis" default="false" />
 
-	<arg name="uid" default=""/>
+  <arg name="uid" default="0"/>
   <arg name="video_namespace" default="/vrmagic/left"/>
 	<arg name="video_image_topic" default="image_rect"/>
 	<arg name="video_info_topic" default="camera_info"/>

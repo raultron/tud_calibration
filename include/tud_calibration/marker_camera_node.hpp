@@ -25,6 +25,14 @@ class MarkerCameraNode {
   tf::TransformBroadcaster tf_broadcaster_;
   tf::TransformListener tf_listener_;
 
+  tf::StampedTransform& tf_interpolation(tf::StampedTransform& new_tf, tf::StampedTransform& old_tf, double interpolation_weight);
+  tf::Vector3 vector_interpolation(tf::Vector3 new_vector, tf::Vector3 old_vector, double interpolation_weight);
+  tf::Quaternion quaternion_interpolation(tf::Quaternion new_q, tf::Quaternion old_q, double interpolation_weight);
+  tf::StampedTransform do_interpolation_tf_buffer(boost::circular_buffer<tf::StampedTransform> buffer);
+
+
+  boost::circular_buffer<tf::StampedTransform> marker_to_cam_buffer;
+
 
 
 };
